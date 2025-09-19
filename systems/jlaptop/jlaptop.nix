@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix #
+      ./../modules/jfaber-common.nix
     ];
 
   # ... (other system configurations)

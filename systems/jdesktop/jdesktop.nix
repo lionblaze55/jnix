@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./../modules/group1-common.nix
+    ./../modules/jfaber-common.nix
   ];
 
   # Workstation-specific settings
