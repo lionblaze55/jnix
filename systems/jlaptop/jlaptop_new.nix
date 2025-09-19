@@ -14,7 +14,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = {
-      stateVersion = "24.11";
+      stateVersion = "25.05";
       extraSpecialArgs = { inherit (self) inputs; };
       file = {
         # Custom dotfile for the laptop
