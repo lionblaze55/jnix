@@ -13,7 +13,7 @@
     description = "Joshua Faber";
     extraGroups = [ "networkmanager" "wheel" ];
   };
-  
+
   nixpkgs.config.allowUnfree = true;
 
   # Home Manager configuration for the user
@@ -22,7 +22,8 @@
     imports = [
       ./../modules/jfaber-common.nix # A shared module
       #./homemanager/discord.nix     # Host-specific sub-config for Discord
-      #./homemanager/sway.nix        # Host-specific sub-config for Sway
+      ./homemanager/sway.nix        # Host-specific sub-config for Sway
+      ./homemanager/waybar.nix        # Host-specific sub-config for waybar
       # Add other host-specific Home Manager configs here
     ];
   };
