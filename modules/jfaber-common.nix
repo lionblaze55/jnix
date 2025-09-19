@@ -4,6 +4,7 @@
   imports = [
     ../common/programs.nix
     ../common/user.nix
+    ../common/backend.nix
     ../homemanager/xdg.nix
   ];
 
