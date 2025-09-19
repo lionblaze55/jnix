@@ -1,27 +1,31 @@
 { config, pkgs, ... }:
+
 {
-  imports = [
-    ./../modules/group1-common.nix
-  ];
+  imports =
+    [
+      ./hardware-configuration.nix #
+    ];
 
-  networking.hostName = "group1-laptop";
+  # ... (other system configurations)
 
-  # Laptop-specific settings
-  services.tlp.enable = true; # Example: power management
-
-  # User configuration
-  users.users.username = {
+  users.users.jfaber = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    home = {
-      stateVersion = "25.05";
-      extraSpecialArgs = { inherit (self) inputs; };
-      file = {
-        # Custom dotfile for the laptop
-        ".config/something/laptop-config" = {
-          text = "Laptop-specific setting";
-        };
-      };
-    };
+    description = "Joshua Faber";
+    extraGroups = [ "networkmanager" "wheel" ];
   };
+  
+  nixpkgs.config.allowUnfree = true;
+
+  # Home Manager configuration for the user
+  home-manager.users.jfaber = {
+    home.stateVersion = "25.05";
+    imports = [
+      ./../modules/jfaber-common.nix # A shared module
+      #./homemanager/discord.nix     # Host-specific sub-config for Discord
+      #./homemanager/sway.nix        # Host-specific sub-config for Sway
+      # Add other host-specific Home Manager configs here
+    ];
+  };
+
+  # ... (other system configurations)
 }
