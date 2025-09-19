@@ -12,38 +12,38 @@
   outputs = { self, nixpkgs, home-manager, ... }: {
     # Define NixOS systems
     nixosConfigurations = {
-      "group1-workstation" = nixpkgs.lib.nixosSystem {
+      "jdesktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/group1-workstation.nix
+          ./systems/jdesktop/jdesktop.nix
           home-manager.nixosModules.home-manager
         ];
       };
-      "group1-laptop" = nixpkgs.lib.nixosSystem {
+      "jlaptop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/group1-laptop.nix
+          ./systems/jlaptop/jlaptop.nix
           home-manager.nixosModules.home-manager
         ];
       };
-      "group2-workstation" = nixpkgs.lib.nixosSystem {
+      "edesktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/group2-workstation.nix
+          ./systems/edesktop/edesktop.nix
           home-manager.nixosModules.home-manager
         ];
       };
-      "group2-laptop" = nixpkgs.lib.nixosSystem {
+      "elaptop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/group2-laptop.nix
+          ./systems/elaptop/elaptop.nix
           home-manager.nixosModules.home-manager
         ];
       };
-      "tv-x86" = nixpkgs.lib.nixosSystem {
+      "jtv" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/tv-x86.nix
+          ./systems/jtv/jtv.nix
           home-manager.nixosModules.home-manager
         ];
       };
