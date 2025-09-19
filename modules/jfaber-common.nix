@@ -1,12 +1,13 @@
-# modules/group1-common.nix
+# modules/jfaber-common.nix
 { pkgs, ... }:
 {
   imports = [
     ../common/programs.nix
     ../common/user.nix
+    ../homemanager/xdg.nix
   ];
 
-  # Example: Add group1-specific software
+  # Example: Add jfaber-specific software
   home.packages = with pkgs; [
     neovim
     docker
