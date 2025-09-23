@@ -5,6 +5,8 @@
     vim
     git
     htop
+    power-profiles-daemon
+    stow
   ];
 
   # System-wide fonts
