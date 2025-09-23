@@ -9,10 +9,13 @@
     stow
   ];
 
-  #gamemode service
+  # gamemode service
   programs.gamemode.enable = true;
+  
+  # flatpak support
+  services.flatpak.enable = true;
 
-  # System-wide fonts
+  # fonts
   fonts = {
     packages = with pkgs; [
       font-awesome
