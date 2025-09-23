@@ -9,7 +9,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    neovim
+    fuzzel
+    waybar
   ];
 
   # Optional: Enable Docker service if needed
