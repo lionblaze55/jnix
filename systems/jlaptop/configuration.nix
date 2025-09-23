@@ -26,9 +26,5 @@
   #    # Add other host-specific Home Manager configs here
   #  ];
   #};
-
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   # ... (other system configurations)
 }
