@@ -27,5 +27,8 @@
   #  ];
   #};
 
+  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # ... (other system configurations)
 }
