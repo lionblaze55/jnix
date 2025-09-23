@@ -9,6 +9,9 @@
     stow
   ];
 
+  #gamemode service
+  programs.gamemode.enable = true;
+
   # System-wide fonts
   fonts = {
     packages = with pkgs; [
