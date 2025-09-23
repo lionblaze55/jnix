@@ -16,32 +16,32 @@
       "jdesktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/jdesktop/jdesktop.nix
+          ./systems/jdesktop/configuration.nix
           # home-manager.nixosModules.home-manager
         ];
       };
       "jlaptop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/jlaptop/jlaptop.nix
+          ./systems/jlaptop/configuration.nix
         ];
       };
       "edesktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/edesktop/edesktop.nix
+          ./systems/edesktop/configuration.nix
         ];
       };
       "elaptop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/elaptop/elaptop.nix
+          ./systems/elaptop/configuration.nix
         ];
       };
       "jtv" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/jtv/jtv.nix
+          ./systems/jtv/configuration.nix
         ];
       };
     };
