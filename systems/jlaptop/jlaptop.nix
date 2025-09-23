@@ -15,8 +15,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   # #TODO removed until understood better! Home Manager configuration for the user
   #home-manager.users.jfaber = {
   #  home.stateVersion = "25.05";
