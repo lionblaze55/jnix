@@ -1,16 +1,20 @@
 # modules/jfaber-common.nix
-{ pkgs, ... }:
+{ config, pkgs, ... }:
+
 {
   imports = [
     ../common/programs.nix
     ../common/user.nix
     ../common/backend.nix
-    ../homemanager/xdg.nix
   ];
 
-  # Example: Add jfaber-specific software
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     neovim
-    docker
   ];
+
+  # Optional: Enable Docker service if needed
+  #services.docker.enable = true;
+
+  # Optional: Add jfaber user to docker group
+  #users.users.jfaber.extraGroups = [ "docker" ];
 }
