@@ -1,14 +1,20 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
-  home.packages = with pkgs; [
+  # System-wide CLI tools available to all users
+  environment.systemPackages = with pkgs; [
     vim
     git
     htop
   ];
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    hack-font
-];
+  # System-wide fonts
+  fonts = {
+    packages = with pkgs; [
+      font-awesome
+      hack-font
+    ];
 
+    # Fontconfig is typically enabled by desktop modules; keep this explicit if needed.
+    # fontconfig.enable = true;
+  };
 }
