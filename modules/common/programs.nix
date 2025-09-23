@@ -7,8 +7,8 @@
   ];
 
   fonts.packages = with pkgs; [
-  font-awesome
-  hack-font
+    font-awesome
+    hack-font
 ];
 
 }
