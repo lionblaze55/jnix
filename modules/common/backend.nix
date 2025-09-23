@@ -10,9 +10,12 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enable ZRAM
+  zramSwap.enable = true;
+
+  # Misc services
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  services.flatpak.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
