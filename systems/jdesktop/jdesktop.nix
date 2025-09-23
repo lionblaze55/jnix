@@ -13,4 +13,6 @@
     extraGroups = [ "wheel" ];
     home = "/home/jfaber";
   };
+  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
