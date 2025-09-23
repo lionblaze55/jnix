@@ -4,10 +4,18 @@
   # Set up a common set of packages.
   environment.systemPackages = with pkgs; [
     git
+    stow
     vim
+    distrobox
     wget
     curl
   ];
+
+  # Enable podman
+  virtualisation.podman = {
+  enable = true;
+  dockerCompat = true;
+  };
 
   # Enable networking.
   networking.networkmanager.enable = true;
