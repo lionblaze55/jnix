@@ -10,7 +10,7 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, ... }: {
     # Define NixOS systems
     nixosConfigurations = {
       "jdesktop" = nixpkgs.lib.nixosSystem {
