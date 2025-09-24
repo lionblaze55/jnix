@@ -6,7 +6,7 @@
       ./hardware-configuration.nix #
       ../../modules/common
       ../../modules/desktop
-      ../../modules/jlaptop
+      ../../modules/jfaber
     ];
 
   # ... (other system configurations)
