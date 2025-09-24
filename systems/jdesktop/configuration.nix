@@ -1,8 +1,12 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    ./../modules/jfaber-common.nix
-  ];
+  imports =
+    [
+      ./hardware-configuration.nix #
+      ../../modules/common
+      ../../modules/desktop
+      ../../modules/jdesktop
+    ];
 
   # Workstation-specific settings
   networking.hostName = "jdesktop";
