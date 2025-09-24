@@ -7,11 +7,20 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  # Enable sway
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+
+  services.gnome.gnome-keyring.enable = true;
+
   # Common applications for jfaber.
   environment.systemPackages = with pkgs; [
     firefox
-    vscode
-    element-desktop
-    obs-studio
+    grimshot
+    #vscode
+    #element-desktop
+    #obs-studio
   ];
 }
