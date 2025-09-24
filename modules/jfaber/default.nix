@@ -13,6 +13,9 @@
     wrapperFeatures.gtk = true;
   };
 
+  # Enable vscodium
+  environment.systemPackages = with pkgs; [ vscodium ];
+
   services.gnome.gnome-keyring.enable = true;
 
   # Common applications for jfaber.
