@@ -63,12 +63,12 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jfaber = {
-    isNormalUser = true;
-    description = "Joshua Faber";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
+  #users.users.jfaber = {
+  #  isNormalUser = true;
+  #  description = "Joshua Faber";
+  #  extraGroups = [ "networkmanager" "wheel" ];
+  #  packages = with pkgs; [];
+  #};
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
