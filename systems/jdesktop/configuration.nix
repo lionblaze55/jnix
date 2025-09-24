@@ -5,7 +5,7 @@
       ./hardware-configuration.nix #
       ../../modules/common
       ../../modules/desktop
-      ../../modules/jdesktop
+      ../../modules/jfaber
     ];
 
   # Workstation-specific settings
