@@ -12,6 +12,8 @@
     htop
   ];
 
+  nix.settings.experimental.features = [ "nix-command" "flakes" ];
+
   # Enable podman
   virtualisation.podman = {
   enable = true;
