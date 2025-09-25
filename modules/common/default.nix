@@ -18,6 +18,14 @@
   dockerCompat = true;
   };
 
+  # Enable zram swapping on all machines
+  zramSwap = {
+  enable = true;
+  algorithm = "zstd";
+  # This refers to the uncompressed size, actual memory usage will be lower.
+  memoryPercent = 50;
+  };
+
   # Enable networking.
   networking.networkmanager.enable = true;
 
