@@ -20,7 +20,6 @@
   # Common applications for jfaber.
   environment.systemPackages = with pkgs; [
     firefox
-    grimshot
     vscodium
     wl-clipboard
     swaylock
