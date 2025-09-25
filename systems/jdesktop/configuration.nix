@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix #
       ../../modules/common
-      ../../modules/desktop
+      ../../modules/workstation
       ../../modules/jfaber
     ];
 
@@ -68,10 +68,6 @@
     wl-clipboard
     networkmanagerapplet
     firefox
-    waybar
-    fuzzel
-    foot
-    gnome-disk-utility
 #   signal-desktop
   ];
 
@@ -123,4 +119,5 @@
   #  ];
   #};
   # ... (other system configurations)
+  home.stateVersion = "25.05";
 }
