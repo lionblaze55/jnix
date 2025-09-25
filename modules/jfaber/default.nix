@@ -19,7 +19,6 @@
 
   # Common applications for jfaber.
   environment.systemPackages = with pkgs; [
-    firefox
     vscodium
     wl-clipboard
     swaylock
@@ -29,8 +28,5 @@
     fuzzel
     foot
     gnome-disk-utility
-    #vscode
-    #element-desktop
-    #obs-studio
   ];
 }
