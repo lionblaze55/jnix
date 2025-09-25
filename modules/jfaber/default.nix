@@ -25,6 +25,10 @@
     swaylock
     swayidle
     swaybg
+    waybar
+    fuzzel
+    foot
+    gnome-disk-utility
     #vscode
     #element-desktop
     #obs-studio
