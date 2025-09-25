@@ -3,13 +3,13 @@
 {
   # Set up a common set of packages.
   environment.systemPackages = with pkgs; [
+    curl
+    distrobox
     git
+    htop
     stow
     vim
-    distrobox
     wget
-    curl
-    htop
   ];
 
   # Enable podman
