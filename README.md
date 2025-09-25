@@ -16,6 +16,7 @@ After the initial install, or to apply new changes, you can rebuild the system. 
 
 ```.
 ├── flake.nix
+├── flake.lock
 ├── hosts
 │   ├── jdesktop
 │   │   ├── configuration.nix
@@ -34,7 +35,8 @@ After the initial install, or to apply new changes, you can rebuild the system. 
 │       └── hardware-configuration.nix
 └── modules
     ├── common
-    │   └── default.nix
+    │   ├── default.nix
+    │   └── maintenance.nix
     ├── desktop
     │   └── default.nix
     ├── jfaber
