@@ -81,10 +81,6 @@
     foot
     gnome-disk-utility
 #    signal-desktop
-    swaylock
-    swayidle
-    swaybg
-    vscodium
   ];
 
   programs.sway = {
