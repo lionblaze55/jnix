@@ -34,6 +34,10 @@
     firefox
     grimshot
     vscodium
+    wl-clipboard
+    swaylock
+    swayidle
+    swaybg
     #vscode
     #element-desktop
     #obs-studio

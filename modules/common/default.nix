@@ -9,6 +9,7 @@
     distrobox
     wget
     curl
+    htop
   ];
 
   # Enable podman
