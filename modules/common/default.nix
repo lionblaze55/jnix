@@ -12,7 +12,6 @@
     htop
   ];
 
-  settings.experimental-features = [ "nix-command" "flakes" ];
   # Enable podman
   virtualisation.podman = {
   enable = true;
@@ -25,3 +24,5 @@
   # Set the timezone.
   time.timeZone = "America/New_York";
 }
+
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
