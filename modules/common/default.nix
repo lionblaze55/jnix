@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+
+  imports =
+    [
+      ./maintenance.nix # default settings to keep nixos running smoothly
+    ];
+
   # Set up a common set of packages.
   environment.systemPackages = with pkgs; [
     curl
