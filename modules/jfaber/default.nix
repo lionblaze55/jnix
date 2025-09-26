@@ -17,7 +17,13 @@
 
   services.flatpak.enable = true;
 
+  #Thunar stuff
   programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+  thunar-archive-plugin
+  thunar-volman
+  ];
 
   # Common applications for jfaber.
   environment.systemPackages = with pkgs; [
