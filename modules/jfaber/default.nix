@@ -28,5 +28,6 @@
     fuzzel
     foot
     gnome-disk-utility
+    thunar
   ];
 }
