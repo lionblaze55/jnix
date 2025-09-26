@@ -21,8 +21,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
+  # jdesktop disks
   fileSystems."/mnt/g" =
     { device = "/dev/disk/by-uuid/e1e59b33-24f6-4515-b460-a0f33838d220";
+      fsType = "btrfs";
+    };
+
+  fileSystems."/mnt/z" =
+    { device = "/dev/disk/by-uuid/25edcfed-79c4-4667-a05c-10e8a1aee5f4";
       fsType = "btrfs";
     };
 
