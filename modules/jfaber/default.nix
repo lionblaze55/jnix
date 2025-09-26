@@ -22,7 +22,7 @@
         enable = true;
         user = "jfaber";
         dataDir = "/home/jfaber";    # Default folder for new synced folders, instead of /var/lib/syncthing
-        #configDir = "/home/wrycode/.config/syncthing";   # Folder for Syncthing's settings and keys. Will be overwritten by Nix!		
+        configDir = "/home/jfaber/a/rc/jnix/files/jdesktop/syncthing";   # Folder for Syncthing's settings and keys. Will be overwritten by Nix!		
     };
   };
 
