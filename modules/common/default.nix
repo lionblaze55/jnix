@@ -17,6 +17,7 @@
     stow
     vim
     wget
+    udisks2
   ];
 
   # Enable podman
