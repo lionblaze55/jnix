@@ -24,7 +24,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "jlaptop"; # Define your hostname.
+  networking.hostName = "edesktop"; # Define your hostname.
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -75,11 +75,8 @@
   security.polkit.enable = true;
 #  services.gnome.gnome-keyring.enable = true;
   services.flatpak.enable = true;
-  nixpkgs.config.allowUnfree = true;
+#  nixpkgs.config.allowUnfree = true;
 
-  boot.kernelModules = [ "wl" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
-  boot.blacklistedKernelModules = [ "b43" "bcma" ];
 
   fonts.packages = with pkgs; [
     font-awesome
