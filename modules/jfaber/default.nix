@@ -17,6 +17,15 @@
 
   services.flatpak.enable = true;
 
+  services = {
+    syncthing = {
+        enable = true;
+        user = "jfaber";
+        dataDir = "/home/jfaber";    # Default folder for new synced folders, instead of /var/lib/syncthing
+        #configDir = "/home/wrycode/.config/syncthing";   # Folder for Syncthing's settings and keys. Will be overwritten by Nix!		
+    };
+  };
+
   #Thunar stuff
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
