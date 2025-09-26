@@ -17,7 +17,6 @@
     stow
     vim
     wget
-    mpv
     power-profiles-daemon
   ];
 
