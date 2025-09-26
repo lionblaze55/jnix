@@ -113,5 +113,5 @@
   #  ];
   #};
   # ... (other system configurations)
-  home.stateVersion = "25.05";
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
