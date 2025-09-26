@@ -23,11 +23,11 @@
 
 
   # jdesktop disks
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5bb3c17e-8a9a-4b42-b09c-851630ad0103";
-      fsType = "btrfs";
-      options = [ "defaults" ];
-    };
+  #fileSystems."/" =
+  #  { device = "/dev/disk/by-uuid/5bb3c17e-8a9a-4b42-b09c-851630ad0103";
+  #    fsType = "btrfs";
+  #    options = [ "defaults" ];
+  #  };
   fileSystems."/mnt/g" =
     { device = "/dev/disk/by-uuid/e1e59b33-24f6-4515-b460-a0f33838d220";
       fsType = "btrfs";
