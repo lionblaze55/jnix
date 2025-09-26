@@ -30,7 +30,7 @@
   programs.gamemode.enable = true;
 
   #PPD
-  services.power-profiles-daemon.enable;
+  services.power-profiles-daemon.enable=true;
 
   # Enable zram swapping on all machines
   zramSwap = {
