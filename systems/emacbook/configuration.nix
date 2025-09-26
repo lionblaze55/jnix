@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix #
       ../../modules/common
-      ../../modules/laptop
+      ../../modules/workstation
       ../../modules/efaber
     ];
 
@@ -24,13 +24,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "emacbook"; # Define your hostname.
-#  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-#  networking.wireless.networks = {
-#    fLink_2G = {
-#      psk = "I<3Millie";
-#    };
-#  };
+  networking.hostName = "jlaptop"; # Define your hostname.
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -73,11 +67,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    firefox
+    gnome-disk-utility
 #    signal-desktop
   ];
 
   security.polkit.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+#  services.gnome.gnome-keyring.enable = true;
   services.flatpak.enable = true;
 #  nixpkgs.config.allowUnfree = true;
 
