@@ -34,8 +34,10 @@
     swaylock
     swayidle
     swaybg
+    swaynotificationcenter
     waybar
     fuzzel
     foot
+    pavucontrol
   ];
 }
