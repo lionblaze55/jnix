@@ -28,6 +28,7 @@
 
   # enable gamemode
   programs.gamemode.enable = true;
+  programs.gamemode.settings.general.inhibit_screensaver = 0;
 
   #PPD
   services.power-profiles-daemon.enable=true;
