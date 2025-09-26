@@ -8,16 +8,22 @@
   };
 
   # Enable sway
+  services.gnome.gnome-keyring.enable = true;
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
   };
 
-  services.gnome.gnome-keyring.enable = true;
+  # Enable virt-manager stuff
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["jfaber"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
+  # Flatpak
   services.flatpak.enable = true;
 
-  #Thunar stuff
+  # Thunar stuff
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities
