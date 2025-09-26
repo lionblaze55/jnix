@@ -25,6 +25,9 @@
   dockerCompat = true;
   };
 
+  # enable gamemode
+  programs.gamemode.enable = true;
+
   # Enable zram swapping on all machines
   zramSwap = {
   enable = true;
