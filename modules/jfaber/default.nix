@@ -17,6 +17,8 @@
 
   services.flatpak.enable = true;
 
+  programs.thunar.enable = true;
+
   # Common applications for jfaber.
   environment.systemPackages = with pkgs; [
     vscodium
@@ -28,6 +30,5 @@
     fuzzel
     foot
     gnome-disk-utility
-    thunar
   ];
 }
