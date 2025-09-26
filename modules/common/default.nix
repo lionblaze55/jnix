@@ -17,7 +17,7 @@
     stow
     vim
     wget
-    udisks2
+    power-profiles-daemon
   ];
 
   # Enable podman
