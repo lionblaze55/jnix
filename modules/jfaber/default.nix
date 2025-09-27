@@ -14,6 +14,13 @@
     wrapperFeatures.gtk = true;
   };
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };  
+
   # Enable virt-manager stuff
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["jfaber"];
