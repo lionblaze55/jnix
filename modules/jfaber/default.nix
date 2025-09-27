@@ -20,7 +20,12 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-  };  
+    # override the default GTK-Theme from Stylix
+    theme = lib.mkForce {
+      name = "Nightfox-Dark";
+      package = pkgs.nightfox-gtk-theme;
+    };
+  };
 
   # Enable virt-manager stuff
   programs.virt-manager.enable = true;

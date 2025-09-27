@@ -10,6 +10,7 @@
   # Set up a common set of packages.
   environment.systemPackages = with pkgs; [
     papirus-icon-theme
+    nightfox-gtk-theme
     curl
     distrobox
     firefox
