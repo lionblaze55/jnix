@@ -19,7 +19,8 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
-    };  
+    };
+  };  
 
   # Enable virt-manager stuff
   programs.virt-manager.enable = true;
