@@ -73,11 +73,10 @@
   ];
 
   security.polkit.enable = true;
-#  services.gnome.gnome-keyring.enable = true;
   services.flatpak.enable = true;
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowInsecurePredicate = pkg: builtins.elem (lib.getName pkg) [ "broadcom_sta" ];
-  
+  nixpkgs.config.allowInsecurePredicate = pkg: builtins.elem (lib.getName pkg) [ "broadcom-sta" ];
+
   boot.kernelModules = [ "wl" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
   boot.blacklistedKernelModules = [ "b43" "bcma" ];
