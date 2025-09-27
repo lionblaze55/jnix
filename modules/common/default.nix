@@ -9,6 +9,7 @@
 
   # Set up a common set of packages.
   environment.systemPackages = with pkgs; [
+    papirus-icon-theme
     curl
     distrobox
     firefox
