@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -24,7 +24,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "jlaptop"; # Define your hostname.
+  networking.hostName = "emacbook"; # Define your hostname.
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -76,7 +76,8 @@
 #  services.gnome.gnome-keyring.enable = true;
   services.flatpak.enable = true;
   nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config.allowInsecurePredicate = pkg: builtins.elem (lib.getName pkg) [ "broadcom_sta" ];
+  
   boot.kernelModules = [ "wl" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
   boot.blacklistedKernelModules = [ "b43" "bcma" ];

@@ -32,10 +32,10 @@
           ./systems/edesktop/configuration.nix
         ];
       };
-      "elaptop" = nixpkgs.lib.nixosSystem {
+      "emacbook" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./systems/elaptop/configuration.nix
+          ./systems/emacbook/configuration.nix
         ];
       };
       "jtv" = nixpkgs.lib.nixosSystem {
