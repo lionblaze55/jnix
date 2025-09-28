@@ -41,7 +41,6 @@
     swayidle
     swaybg
     swaynotificationcenter
-    mako
     waybar
     fuzzel
     foot
