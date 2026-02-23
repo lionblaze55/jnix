@@ -23,20 +23,21 @@
 
 
   # jdesktop disks
-  #fileSystems."/" =
-  #  { device = "/dev/disk/by-uuid/5bb3c17e-8a9a-4b42-b09c-851630ad0103";
-  #    fsType = "btrfs";
-  #    options = [ "defaults" ];
-  #  };
-  #fileSystems."/mnt/g" =
-  #  { device = "/dev/disk/by-uuid/e1e59b33-24f6-4515-b460-a0f33838d220";
-  #    fsType = "btrfs";
-  #  };
-  #
-  #fileSystems."/mnt/z" =
-  #  { device = "/dev/disk/by-uuid/25edcfed-79c4-4667-a05c-10e8a1aee5f4";
-  #    fsType = "btrfs";
-  #  };
+  fileSystems."/" =
+    { device = "/dev/mapper/luks-ad8758ff-9604-479b-a7ae-d2eb255d09f1";
+      fsType = "ext4";
+      options= [ "defaults" ];
+    };
+  fileSystems."/mnt/g" =
+    { device = "/dev/disk/by-uuid/083f2c74-aeb5-4fe3-ae00-f6a7ebd1726a";
+      fsType = "auto";
+      options= [ "defaults" "nofail" ];
+    };  
+  fileSystems."/mnt/z" =
+    { device = "/dev/disk/by-uuid/4285d0ce-0def-4584-9228-bcf0795f49d6";
+      fsType = "auto";
+      options= [ "defaults" "nofail" ];
+    };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
