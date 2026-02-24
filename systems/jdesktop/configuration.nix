@@ -23,20 +23,20 @@
 
 
   # jdesktop disks
-  #fileSystems."/" =
-  #  { device = "/dev/mapper/luks-ad8758ff-9604-479b-a7ae-d2eb255d09f1";
-  #    fsType = "ext4";
-  #    options= [ "defaults" ];
-  #  };
+  fileSystems."/" =
+    { device = "/dev/mapper/luks-343b58c4-d56f-4961-9e73-4d7ff8a712bb";
+      fsType = "btrfs";
+      options = [ "subvol=@" "defaults" "compress=zstd:1" "noatime" "discard=async" "space_cache=v2" ];
+    };
   fileSystems."/mnt/g" =
-    { device = "/dev/disk/by-uuid/083f2c74-aeb5-4fe3-ae00-f6a7ebd1726a";
-      fsType = "auto";
-      options = [ "nosuid" "nodev" "nofail" "user" "exec" ];
+    { device = "/dev/disk/by-uuid/d59767b0-cc74-4acc-93fb-25e24f53449e";
+      fsType = "btrfs";
+      options = [ "autodefrag" "defaults" "compress=zstd:1" "noatime" "discard=async" "space_cache=v2" ];
     };  
   fileSystems."/mnt/z" =
-    { device = "/dev/disk/by-uuid/4285d0ce-0def-4584-9228-bcf0795f49d6";
-      fsType = "auto";
-      options = [ "nosuid" "nodev" "nofail" "user" "exec" ];
+    { device = "/dev/disk/by-uuid/5efd422d-9ce0-49a4-b4b7-dfba42d9e434";
+      fsType = "btrfs";
+      options = [ "autodefrag" "defaults" "compress=zstd:1" "noatime" "discard=async" "space_cache=v2" ];
     };
 
   # Use latest kernel.
