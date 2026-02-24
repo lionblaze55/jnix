@@ -21,6 +21,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # jlaptop disks
+  fileSystems."/" =
+    { device = "/dev/mapper/luks-04e33dd7-de52-448f-8839-dc2f83eabd7f";
+      fsType = "btrfs";
+      options = [ "subvol=@" "defaults" "compress=zstd:1" "noatime" "discard=async" "space_cache=v2" ];
+    };
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
