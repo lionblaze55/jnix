@@ -4,6 +4,7 @@
   # Define the jfaber user.
   users.users.jfaber = {
     isNormalUser = true;
+    description = "Joshua Faber";
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
