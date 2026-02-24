@@ -11,11 +11,11 @@
 
   # ... (other system configurations)
 
-  users.users.jfaber = {
-    isNormalUser = true;
-    description = "Joshua Faber";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
+  #users.users.jfaber = {
+  #  isNormalUser = true;
+  #  description = "Joshua Faber";
+  #  extraGroups = [ "networkmanager" "wheel" ];
+  #};
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
